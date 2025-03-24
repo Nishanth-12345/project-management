@@ -9,7 +9,6 @@ import { useProjectStore } from '@/store/projectStore';
 const ProjectPage = () => {
     const { projects,search, loading } = useProjectStore();
 
-
     const filteredProjects = projects.filter((project) =>
         project.name.toLowerCase().includes(search.toLowerCase())
     );
