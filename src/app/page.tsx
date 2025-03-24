@@ -1,11 +1,18 @@
-import { Suspense } from "react";
-import ProjectPage from "./projects/page";
+"use client";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
 
 export default function Home() {
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/projects");
+  },[]);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ProjectPage />
-    </Suspense>
+    <div className="">
+      <Link href={'/projects'} className="primary-color">Click here to View All Projects</Link>
+    </div>
   );
 }

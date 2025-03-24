@@ -15,7 +15,7 @@ const Login = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        router.push("/");
+        router.push("/projects");
       } else {
         setLoading(false);
       }

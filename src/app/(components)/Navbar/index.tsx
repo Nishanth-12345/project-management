@@ -37,14 +37,14 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-black px-6 py-3 rounded-b-[20px] shadow-md flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/projects" className="flex items-center gap-2">
           <Image src={logo} alt="logo" width={120} height={40} />
         </Link>
 
         <div className="hidden md:flex items-center gap-6">
-          <NavItem href="/" icon={dashboardIcon} label="CEO Dashboard" />
+          <NavItem href="/projects" icon={dashboardIcon} label="CEO Dashboard" />
           <NavItem href="/search" icon={searchIcon} label="ALL Media" />
-          <NavLink href="/">Projects</NavLink>
+          <NavLink href="/projects">Projects</NavLink>
           <NavLink href="/maps">Maps</NavLink>
           <NavLink href="/charts">Charts</NavLink>
         </div>
@@ -102,9 +102,9 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-col gap-4 p-4">
-          <NavItem href="/" icon={dashboardIcon} label="CEO Dashboard" sidebar />
+          <NavItem href="/projects" icon={dashboardIcon} label="CEO Dashboard" sidebar />
           <NavItem href="/search" icon={searchIcon} label="ALL Media" sidebar />
-          <NavLink href="/" sidebar>Projects</NavLink>
+          <NavLink href="/projects" sidebar>Projects</NavLink>
           <NavLink href="/maps" sidebar>Maps</NavLink>
           <NavLink href="/charts" sidebar>Charts</NavLink>
         </div>
