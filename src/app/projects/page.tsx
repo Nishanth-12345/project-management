@@ -1,20 +1,12 @@
 "use client";
 export const dynamic = "force-dynamic";
-import React, { Suspense } from 'react';
+import React from 'react';
 import ProjectCard from './ProjectCard';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useProjectStore } from '@/store/projectStore';
 
 const ProjectPage = () => {
-    return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <ProjectContent />
-        </Suspense>
-    );
-};
-
-const ProjectContent = () => {
     const { projects, search, loading } = useProjectStore();
     const searchParams = useSearchParams();
     const selectedProject = searchParams.get("selected") || "No project selected";
