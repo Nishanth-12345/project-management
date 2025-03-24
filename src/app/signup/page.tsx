@@ -26,7 +26,7 @@ const Signup = () => {
 
     try {
       await registerUser(form.name, form.email, form.password);
-      router.push("/"); 
+      router.push("/projects"); 
     } catch (err) {
       console.log(err);
       setError("Signup failed. Please try again.");
@@ -35,7 +35,7 @@ const Signup = () => {
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
           if (user) {
-            router.push("/");
+            router.push("/projects");
           } else {
             setLoading(false);
           }
