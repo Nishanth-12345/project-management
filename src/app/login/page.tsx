@@ -15,7 +15,7 @@ const Login = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        router.push("/projects");
+        router.push("/");
       } else {
         setLoading(false);
       }
@@ -41,7 +41,7 @@ const Login = () => {
 
     try {
       await signInWithEmailAndPassword(auth, form.email, form.password);
-      router.push("/projects");
+      router.push("/");
     } catch (err: unknown) {
       console.error("Login error:", err);
 

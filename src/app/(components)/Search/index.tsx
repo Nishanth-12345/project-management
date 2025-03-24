@@ -15,7 +15,7 @@ const Search = () => {
     <div className="flex flex-wrap rounded-[25px] items-center w-full px-4 py-4 bg-white gap-4 md:gap-6 lg:gap-8">
   
       <Link
-        href={"/projects"}
+        href={"/"}
         className="flex items-center gap-2 px-4 py-2 secondary-bg primary-color text-white rounded-full hover:bg-blue-600 transition"
       >
         <Image src={ArrowLeftIcon} width={16} height={16} alt="Back" className="w-5 h-5" />

@@ -1,9 +1,11 @@
-
+import { Suspense } from "react";
+import ProjectPage from "./projects/page";
 
 export default function Home() {
-  
+
   return (
-    <div className="">
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectPage />
+    </Suspense>
   );
 }

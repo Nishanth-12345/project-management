@@ -56,7 +56,7 @@ const ProjectAddPage = () => {
                 virtualTours,
             });
 
-            router.push('/projects');
+            router.push('/');
         } catch (error) {
             console.error("Error submitting project:", error);
         }

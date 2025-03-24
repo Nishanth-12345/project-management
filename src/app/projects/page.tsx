@@ -5,14 +5,8 @@ import ProjectCard from './ProjectCard';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useProjectStore } from '@/store/projectStore';
+
 const ProjectPage = () => {
-    return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <ProjectContent />
-      </Suspense>
-    );
-  };
-const ProjectContent = () => {
     const { projects,search, loading } = useProjectStore();
 
 
