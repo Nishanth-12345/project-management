@@ -16,7 +16,8 @@
 # next.js
 /.next/
 /out/
-
+# Ignore env files
+.env.local
 # production
 /build
 
